@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Juventus F.C.</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="topo">
+
+    <div class="logo-area">
+
+        <img src="escudo-juventus.png.jpeg" class="escudo" alt="Escudo Juventus">
+
+        <div>
+            <h1>JUVENTUS F.C.</h1>
+
+            <div class="linha"></div>
+
+            <p class="fundacao">
+                Fundado em 14/08/2021
+            </p>
+
+            <p class="slogan">
+                DISCIPLINA • UNIÃO • RESPEITO • VITÓRIA
+            </p>
+        </div>
+
+    </div>
+
+    <button class="btn-admin" onclick="abrirAdmin()">
+        🔒 ÁREA ADMIN
+    </button>
+
+</header>
+
+<main class="container">
+
+    <section class="esquerda">
+
+        <div class="card">
+
+            <div class="titulo-card">
+                ⚽ PRÓXIMO JOGO
+            </div>
+
+            <div class="proximo-jogo">
+
+                <div class="time">
+
+                    <img src="escudo-juventus.png.jpeg" alt="Escudo Juventus">
+
+                    <h2>JUVENTUS F.C.</h2>
+
+                </div>
+
+                <div class="versus">
+                    X
+                </div>
+
+                <div class="time">
+
+                    <img src="images/adversario.png">
+
+                    <h2 id="adversario">
+                        ADVERSÁRIO
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <div class="infos-jogo">
+
+                <div class="box-info">
+                    <strong>DATA</strong>
+                    <span id="dataJogo">
+                        15/06/2026
+                    </span>
+                </div>
+
+                <div class="box-info">
+                    <strong>HORÁRIO</strong>
+                    <span id="horaJogo">
+                        09:00
+                    </span>
+                </div>
+
+                <div class="box-info">
+                    <strong>LOCAL</strong>
+                    <span id="localJogo">
+                        Campo do Ribeirão
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="titulo-card">
+                ✅ CONFIRMAÇÃO DE PRESENÇA
+            </div>
+
+            <div id="listaPresenca">
+
+            </div>
+
+            <button class="btn-salvar" onclick="salvarPresenca()">
+                SALVAR CONFIRMAÇÃO
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <div class="titulo-card">
+                📊 RESUMO
+            </div>
+
+            <div class="resumo">
+
+                <div>
+                    <span id="confirmados">0</span>
+                    <p>CONFIRMADOS</p>
+                </div>
+
+                <div>
+                    <span id="pendentes">19</span>
+                    <p>PENDENTES</p>
+                </div>
+
+                <div>
+                    <span id="ausentes">0</span>
+                    <p>AUSENTES</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="direita">
+
+        <div class="card">
+
+            <div class="titulo-card">
+                👥 ELENCO
+            </div>
+
+            <div class="categoria">
+                <h3>ATACANTES</h3>
+                <ul>
+                    <li>Adailton</li>
+                    <li>Fofão</li>
+                    <li>Gere</li>
+                    <li>Willian</li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <h3>MEIO CAMPO</h3>
+                <ul>
+                    <li>Alan</li>
+                    <li>Douglas</li>
+                    <li>Júlio</li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <h3>VOLANTES</h3>
+                <ul>
+                    <li>Moisés</li>
+                    <li>Vitor</li>
+                    <li>Gamarra</li>
+                    <li>Junio</li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <h3>LATERAIS</h3>
+                <ul>
+                    <li>Jelsinho</li>
+                    <li>Márcio</li>
+                    <li>Lucas</li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <h3>ZAGUEIROS</h3>
+                <ul>
+                    <li>Carlinhos</li>
+                    <li>Gustavo</li>
+                    <li>Joan</li>
+                    <li>Miltinho</li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <h3>GOLEIRO</h3>
+                <ul>
+                    <li>Leandrinho</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    JUVENTUS F.C. • RAÇA • FOCO • DETERMINAÇÃO
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

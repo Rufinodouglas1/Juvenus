@@ -1,0 +1,406 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Oswald', sans-serif;
+    background: linear-gradient(180deg, #f3f3f3 0%, #e5e5e5 100%);
+    color:#222;
+    min-height:100vh;
+}
+
+.topo{
+    background: linear-gradient(90deg, #000 0%, #000 65%, #202020 100%);
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.escudo{
+    width:120px;
+    height:auto;
+    transition:.3s;
+}
+
+.escudo:hover{
+    transform:scale(1.05);
+}
+
+.logo-area h1{
+    font-size:42px;
+    letter-spacing:2px;
+}
+
+.linha{
+    width:100%;
+    height:3px;
+    background:white;
+    margin:8px 0;
+}
+
+.fundacao{
+    font-size:14px;
+    color:#ccc;
+}
+
+.slogan{
+    margin-top:5px;
+    font-size:14px;
+    color:#ddd;
+}
+
+.btn-admin{
+    background:#111;
+    color:white;
+    border:2px solid white;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-admin:hover{
+    background:white;
+    color:black;
+}
+
+.container{
+    max-width:1500px;
+    margin:20px auto;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:20px;
+    padding:0 20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    margin-bottom:20px;
+}
+
+.titulo-card{
+    background:black;
+    color:white;
+    padding:15px;
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+.proximo-jogo{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:30px;
+}
+
+.time{
+    text-align:center;
+}
+
+.time img{
+    width:110px;
+}
+
+.time h2{
+    margin-top:10px;
+}
+
+.versus{
+    font-size:60px;
+    font-weight:bold;
+}
+
+.infos-jogo{
+    display:flex;
+    gap:15px;
+    padding:20px;
+}
+
+.box-info{
+    flex:1;
+    text-align:center;
+    background:#f5f5f5;
+    padding:15px;
+    border-radius:8px;
+}
+
+.box-info strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+#listaPresenca{
+    padding:20px;
+    max-height:600px;
+    overflow-y:auto;
+}
+
+.jogador{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+.jogador:hover{
+    background:#f8f8f8;
+}
+
+.status{
+    background:#d9d9d9;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.btn-salvar{
+    width:95%;
+    margin:15px;
+    padding:15px;
+    border:none;
+    background:black;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-salvar:hover{
+    background:#333;
+}
+
+.resumo{
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+    padding:30px;
+}
+
+.resumo span{
+    display:block;
+    font-size:42px;
+    font-weight:bold;
+}
+
+.resumo p{
+    margin-top:10px;
+    font-size:14px;
+}
+
+.categoria{
+    margin:15px;
+}
+
+.categoria h3{
+    background:black;
+    color:white;
+    padding:10px;
+    border-radius:6px;
+}
+
+.categoria ul{
+    list-style:none;
+}
+
+.categoria li{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.categoria li:hover{
+    background:#f5f5f5;
+}
+
+footer{
+    margin-top:20px;
+    background:black;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:16px;
+    letter-spacing:1px;
+}
+
+input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    cursor:pointer;
+}
+
+.card{
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+@media (max-width: 1100px) {
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .proximo-jogo{
+        flex-direction:column;
+        gap:20px;
+        padding:24px 20px;
+    }
+
+    .infos-jogo{
+        flex-direction:column;
+    }
+
+    .resumo{
+        flex-direction:column;
+        gap:18px;
+        padding:20px;
+    }
+}
+
+@media (max-width: 760px) {
+    .topo{
+        padding:20px 20px;
+    }
+
+    .logo-area{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .logo-area h1{
+        font-size:32px;
+    }
+
+    .btn-admin{
+        width:100%;
+        margin-top:10px;
+        text-align:center;
+    }
+
+    .proximo-jogo{
+        padding:20px;
+    }
+
+    .versus{
+        font-size:44px;
+    }
+
+    .categoria{
+        margin:12px 0;
+    }
+
+    .btn-salvar{
+        width:100%;
+    }
+
+    footer{
+        font-size:14px;
+        padding:20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .logo-area h1{
+        font-size:28px;
+    }
+
+    .titulo-card{
+        font-size:18px;
+        padding:14px;
+    }
+
+    .time img{
+        width:80px;
+    }
+
+    .versus{
+        font-size:36px;
+    }
+
+    .resumo span{
+        font-size:32px;
+    }
+
+    .infos-jogo{
+        gap:12px;
+    }
+}
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background:#777;
+    border-radius:10px;
+}
+
+@media(max-width:1000px){
+
+    .container{
+        grid-template-columns:1fr;
+        padding:0 15px;
+    }
+
+    .topo{
+        text-align:center;
+        justify-content:center;
+        gap:20px;
+    }
+
+    .logo-area{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn-admin{
+        width:100%;
+        max-width:360px;
+    }
+
+    .proximo-jogo{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .infos-jogo{
+        flex-direction:column;
+    }
+
+    .resumo{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .btn-salvar{
+        width:100%;
+    }
+
+}
