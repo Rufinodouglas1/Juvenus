@@ -26,7 +26,7 @@
             <div class="linha"></div>
 
             <p class="fundacao">
-                Fundado em 14/08/2021
+                Fundado em 14/08/2021 Presidente e Fundador: Marcio Braga
             </p>
 
             <p class="slogan">
@@ -68,7 +68,7 @@
 
                 <div class="time">
 
-                    <img src="images/adversario.png">
+                    <img id="imagemAdversario" src="images/adversario.png" alt="Escudo do adversário">
 
                     <h2 id="adversario">
                         ADVERSÁRIO
@@ -97,7 +97,7 @@
                 <div class="box-info">
                     <strong>LOCAL</strong>
                     <span id="localJogo">
-                        Campo do Ribeirão
+                        Campo                                  
                     </span>
                 </div>
 
@@ -202,7 +202,7 @@
                     <li>Carlinhos</li>
                     <li>Gustavo</li>
                     <li>Joan</li>
-                    <li>Miltinho</li>
+                    
                 </ul>
             </div>
 
@@ -219,11 +219,119 @@
 
 </main>
 
+<section id="painelAdmin" class="card painel-admin" hidden>
+
+    <div class="titulo-card painel-admin-topo">
+        <span>🔐 ÁREA ADMIN</span>
+        <div class="painel-admin-acoes">
+            <button class="btn-mini" onclick="atualizarPainelAdmin()">ATUALIZAR</button>
+            <button class="btn-mini btn-mini-fechar" onclick="fecharAdmin()">FECHAR</button>
+        </div>
+    </div>
+
+    <div class="painel-admin-resumo">
+        <div>
+            <strong id="adminTotal">0</strong>
+            <span>Total</span>
+        </div>
+        <div>
+            <strong id="adminConfirmados">0</strong>
+            <span>Confirmados</span>
+        </div>
+        <div>
+            <strong id="adminPendentes">0</strong>
+            <span>Pendentes</span>
+        </div>
+    </div>
+
+    <div class="painel-admin-firebase">
+
+        <div class="titulo-admin-secundario">
+            Conexão Firebase
+        </div>
+
+        <p class="firebase-ajuda">
+            Cole aqui a configuração do seu app Web no Firebase Console. Esses campos vêm da tela de registro do aplicativo.
+        </p>
+
+        <div class="firebase-grid">
+
+            <input id="firebaseApiKey" type="text" placeholder="apiKey">
+            <input id="firebaseAuthDomain" type="text" placeholder="authDomain">
+            <input id="firebaseProjectId" type="text" placeholder="projectId">
+            <input id="firebaseStorageBucket" type="text" placeholder="storageBucket">
+            <input id="firebaseMessagingSenderId" type="text" placeholder="messagingSenderId">
+            <input id="firebaseAppId" type="text" placeholder="appId">
+
+        </div>
+
+        <div class="painel-admin-acoes firebase-acoes">
+            <button class="btn-mini" onclick="salvarConfiguracaoFirebase()">SALVAR CONEXÃO</button>
+            <button class="btn-mini" onclick="conectarFirebase()">CONECTAR / TESTAR</button>
+        </div>
+
+        <p id="statusFirebase" class="status-firebase">Armazenamento local ativo.</p>
+
+    </div>
+
+    <div class="painel-admin-firebase">
+
+        <div class="titulo-admin-secundario">
+            Próximo jogo
+        </div>
+
+        <p class="firebase-ajuda">
+            Use imagem do aparelho ou cole uma URL. Ao salvar, os dados vão para o Firebase e aparecem nos outros aparelhos.
+        </p>
+
+        <div class="firebase-grid jogo-grid">
+
+            <input id="jogoAdversario" type="text" placeholder="Nome do adversário">
+            <input id="jogoImagem" type="text" placeholder="URL da imagem do escudo">
+            <input id="arquivoImagemAdversario" type="file" accept="image/*" hidden onchange="processarImagemAdversario(this)">
+            <button class="btn-mini btn-upload" onclick="abrirSeletorImagemAdversario()" type="button">ESCOLHER IMAGEM DO CELULAR</button>
+            <div class="preview-jogo">
+                <img id="previewImagemAdversario" src="images/adversario.png" alt="Prévia do escudo do adversário">
+            </div>
+            <input id="jogoData" type="date" placeholder="Data">
+            <input id="jogoHora" type="time" placeholder="Hora">
+            <input id="jogoLocal" type="text" placeholder="Local da partida">
+
+        </div>
+
+        <div class="painel-admin-acoes firebase-acoes">
+            <button class="btn-mini" onclick="salvarProximoJogo()">SALVAR JOGO</button>
+            <button class="btn-mini" onclick="carregarProximoJogoFormulario()">RECARREGAR</button>
+        </div>
+
+        <p id="statusJogo" class="status-firebase">Nenhuma alteração salva ainda.</p>
+
+    </div>
+
+    <div class="painel-admin-conteudo">
+        <table class="tabela-admin">
+            <thead>
+                <tr>
+                    <th>Jogador</th>
+                    <th>Status</th>
+                    <th>Atualizado em</th>
+                </tr>
+            </thead>
+            <tbody id="adminListaPresencas"></tbody>
+        </table>
+    </div>
+
+</section>
+
 <footer>
 
     JUVENTUS F.C. • RAÇA • FOCO • DETERMINAÇÃO
 
 </footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-storage-compat.js"></script>
 
 <script src="script.js"></script>
 
